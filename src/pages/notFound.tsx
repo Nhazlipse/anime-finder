@@ -1,25 +1,34 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import catLogo from '../assets/icons/cat.svg';
 
 const NotFoundPage: React.FC = () => {
-    const navigate = useNavigate();   
+  const navigate = useNavigate();
 
-    const navigateHome = () => {
-        navigate('/');
-    };
+  const navigateHome = () => {
+    navigate("/");
+  };
 
-    return (
-        <div className="h-screen flex items-center justify-center bg-gray-100">
-            <div className="text-center">
-                <h1 className="text-6xl font-bold text-gray-800">404</h1>
-                <p className="text-2xl font-light text-gray-600">Page Not Found</p>
-                <p className="mt-4 text-gray-500">The page you are looking for does not exist or has been moved.</p>
-                <button onClick={navigateHome} className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-md">
-                Back to Home
-            </button>
-            </div>
-        </div>
-    );
+  return (
+
+<div className="h-screen w-screen bg-gray-100 flex items-center">
+	<div className="container flex flex-col md:flex-row items-center justify-center px-5 text-gray-700">
+   		<div className="max-w-md">
+      		<div className="text-5xl font-dark font-bold">404</div>
+            <p
+              className="text-2xl md:text-3xl font-light leading-normal"
+            >Sorry we couldn't find this page. </p>
+          <p className="mb-8">But dont worry, you can find plenty of other things on my homepage.</p>
+          
+          <button onClick={navigateHome} className="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-600 active:bg-blue-600 hover:bg-blue-700">Back to Home</button>
+    </div>
+      <div className="max-w-lg">
+      <img src={catLogo} className="cat logo" alt="Cat Logo" />
+    </div>
+    
+  </div>
+</div>
+  );
 };
 
 export default NotFoundPage;

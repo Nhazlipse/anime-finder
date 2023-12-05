@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
+    const navigate = useNavigate();
+
+    const navigateSearchPage = () => {
+        navigate('/search');
+    };
+
     return (
         <div>
             {/* Hero Section */}
@@ -14,9 +21,9 @@ const HomePage: React.FC = () => {
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8">
                             Discover, Explore, Enjoy
                         </p>
-                        <a href="/dashboard" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full text-lg sm:text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105">
+                        <button onClick={navigateSearchPage} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full text-lg sm:text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105">
                             Get Started
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
