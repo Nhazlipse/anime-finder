@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import LoadingComponent from '../components/Loading';
 
 const DetailsPage: React.FC = () => {
     const { animeId } = useParams();
@@ -20,7 +21,7 @@ const DetailsPage: React.FC = () => {
     }, [animeId]);
 
     if (!animeDetails) {
-        return <div>Loading...</div>;
+        return <LoadingComponent />
     }
 
     return (
