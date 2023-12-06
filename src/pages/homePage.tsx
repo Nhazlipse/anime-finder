@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import animeBackground1 from "../assets/img/anime-bg-1.jpg";
+import FooterComponent from "../components/Footer";
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
@@ -10,8 +11,9 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 flex flex-col lg:flex-row">
-      <div className="flex-1 p-8">
+    <div>
+    <div className="bg-white dark:bg-gray-900 flex flex-col lg:flex-row mb-20">
+      <div className="lg:flex-1 p-8">
         <a
           href="#"
           className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -40,7 +42,7 @@ const HomePage: React.FC = () => {
           We invest in the world’s potential
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-500 dark:text-gray-400">
-          Here at Flowbite we focus on markets where technology, innovation, and
+          Here at Flowbite, we focus on markets where technology, innovation, and
           capital can unlock long-term value and drive economic growth.
         </p>
         <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-4">
@@ -72,10 +74,10 @@ const HomePage: React.FC = () => {
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+              <path d="M2 6a2 2 0 012-2h6a2 2 0 012-2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
               <path
                 fillRule="evenodd"
-                d="M0 3a3 3 0 013-3h14a3 3 0 013 3v14a3 3 0 01-3 3H3a3 3 0 01-3-3V3zm2 0a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V3z"
+                d="M0 3a3 3 0 013-3h14a3 3 0 013 3v14a3 3 0 01-3 3H3a3 3 0 01-3-3V3zm2 0a1 1 0 011-1h14a1 1 0 011-1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V3z"
                 clipRule="evenodd"
               ></path>
             </svg>
@@ -84,13 +86,15 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="lg:w-2/5">
+      <div className="md:lg:w-2/5">
         <img
           src={animeBackground1}
           alt="Anime Background 1"
           className="w-full h-full mt-6 object-cover rounded-tl-3xl rounded-bl-3xl"
         />
       </div>
+    </div>
+      <FooterComponent />
     </div>
   );
 };
